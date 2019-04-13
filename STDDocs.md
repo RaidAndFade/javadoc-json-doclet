@@ -1,18 +1,24 @@
 # How to get JSON Docs for all of java's Standard Library
 
 (Notice that this tutorial is not noob friendly, This is simply because do not think noobs will ever need/want to handle over 5000 json files, if you have this insane desire, I can only assume you are crazy, like me.)
+
 Run this magical script that does everything for you
-*manual instructions at the bottom*
+
+[Manual instructions](#doing-it-manually)
 
 ## Magic Scripts
 
 ### Linux Magic Script
 
-The magic script is stdlib-javadoc.sh, It tries its best to do everything automatically. If it cannot complete, you need to do it manually.
+The magic script is [stdlib-javadoc.sh](stdlib-javadoc.sh), It tries its best to do everything automatically. 
+
+If it cannot complete, you need to do it manually.
 
 ### Windows Magic Script
 
-I'm on OSX right now and don't have access to a windows machine, do it manually and PR a magic script if you feel generous. Make sure your magic script automatically finds the JDK's src.zip since that is the main premise of the magic script.
+I'm on OSX right now and don't have access to a windows machine, do it manually and PR a magic script if you feel generous.
+
+Make sure if you PR, your magic script must automatically find the JDK's src.zip since that is the entire premise of the magic script.
 
 ## Doing it manually
 
