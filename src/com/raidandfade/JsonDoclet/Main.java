@@ -15,7 +15,7 @@ public class Main {
 
     public static boolean start(RootDoc root) throws Exception {
         ClassDoc[] classes = root.classes();
-        File bp = new File(".\\docs");
+        File bp = new File("."+File.separator+"docs");
         if(!bp.exists()&&!bp.mkdirs()) throw new IOException("Couldn't create base folder paths");
         float count = 0;
         int lastpct = 0;
@@ -72,7 +72,7 @@ public class Main {
             ifaces.add(parseType(ifct));
         }
         props.put("interfaces",ifaces);
-        writeJson(new File(".\\docs\\"+c.qualifiedName()+".json"),props);
+        writeJson(new File("."+File.separator+"docs"+File.separator+c.qualifiedName()+".json"),props);
         for (ClassDoc ic:c.innerClasses()) {
             parseClass(ic);
         }

@@ -16,3 +16,6 @@ There's a precompiled .jar in the builds folder that includes all required libra
 
 # Something wrong? Need extra information from the javadoc?
 You can either make an issue or a pull request and I'll get to it eventually.
+
+# Why'd I do this?
+Well you see, i have this wonderful API Endpoint at [My Public Api](https://dash.api.gocode.it/javadoc/). And I get my docs for all of Java's stdlib from there. You can do the same by following the instructions in STDDocs.md
