@@ -40,6 +40,7 @@ public class Main {
         props.put("name",c.name());
         props.put("modifiers",c.modifiers());
         props.put("qualifiedName",c.qualifiedName());
+        props.put("docString", c.commentText());
         Object superclass = null;
         if(c.superclass()!=null){
             superclass = new HashMap<String,Object>();
@@ -47,6 +48,17 @@ public class Main {
             ((HashMap<String,Object>) superclass).put("qualifiedName",c.superclass().qualifiedTypeName());
         }
         props.put("superclass",superclass);
+        ArrayList<HashMap<String, Object>> parents = null;
+        if (c.superclass() != null) {
+            parents = new ArrayList<>();
+            for (ClassDoc sc = c.superclass(); sc != null; sc = sc.superclass()) {
+                HashMap<String, Object> parent = new HashMap<>();
+                parent.put("name",sc.name());
+                parent.put("qualifiedName",sc.qualifiedTypeName());
+                parents.add(parent);
+            }
+        }
+        props.put("parents", parents);
         ArrayList<Object> ans = new ArrayList<>();
         for(AnnotationDesc at : c.annotations()){
             ans.add(parseAnnotation(at));
